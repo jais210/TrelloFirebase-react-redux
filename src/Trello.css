@@ -6,7 +6,7 @@ body {
   }
   
   /*Seccion titulo*/
-  #titulo{
+  #title{
     width: 100%;
     background-color: #89609E;
     line-height: 2.7em;
@@ -18,12 +18,12 @@ body {
     align-items: center;
     position: fixed;
   }
-  #titulo img{
+  #title img{
     margin-top: 5px;
     height: 32px;
     width: 110px;
   }
-  #titulo a{
+  #title a{
     background-color:#89609E;
     text-decoration: none;
     color: white;
@@ -32,16 +32,16 @@ body {
     line-height: 1em;
     margin-left: 10px;
   }
-  #titulo a span{
+  #title a span{
     color: #F9E7;
     margin: 20px;
   }
   
-  #titulo a:hover span{
+  #title a:hover span{
     color: white;
   }
   
-  .tarea{
+  .task{
     width: 25%;
     background: #F9E7;
     border-radius: 3px;
@@ -58,7 +58,7 @@ body {
     text-decoration: none;
     color: black;
   }
-  .tareal{
+  .taskReal{
     background-color: white;
     border-radius: 5px;
     padding: 8px;
@@ -71,7 +71,6 @@ body {
     color: #797a7c;
     border-radius: 0 0 3px 3px;
     cursor: pointer;
-    
   }
   .addNew:hover{
     color: #696a6d;
@@ -91,29 +90,29 @@ body {
     margin-bottom: 10px;
   }
   /*Seccion contenido*/
-  #contenido{
+  #container{
     display: flex;
     flex-direction: row;
   }
-  .tarjeta{
+  .card{
     min-width: 300px;
     margin: 0 10px;
   }
-  .tarea.addNew {
+  .task.addNew {
     transition: all 0.15s ease-out 0s;
     background: #F9E7;
     cursor: pointer;
     color: #bdc3c7;
     margin:0px;
   }
-  #boards .tarea.addNew{
+  #boards .task.addNew{
     margin: 0 0.5em 1em 0.5em;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   /*boton añadir lista*/
-  .empezar{
+  .begging{
     margin: 5px 20px;
     padding: 10px;
     background-color:#F9E79F;
@@ -123,13 +122,13 @@ body {
     width: 17em;
     border-radius: 5px;
   }
-  .empezar:hover {
+  .begging:hover {
     background-color:#F9E79F;
     cursor: pointer;
   }
   
   /*Seccion lista*/
-  .lista {
+  .list {
     background-color:#F9E79F;
     border-radius: 10px;
     margin: 0 15px;
@@ -138,7 +137,7 @@ body {
     display: inline-block;
   }
   
-  .lista h3{
+  .list h3{
     font-weight: bold;
     font-size: 15px;
     line-height: 18px;
@@ -146,7 +145,7 @@ body {
   }
   
   /*boton añadir tarjeta*/
-  .añadir{
+  .add{
     color: gray;
     cursor: pointer;
     margin: 15px 0;

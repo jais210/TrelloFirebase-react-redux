@@ -19,13 +19,13 @@ class Add extends Component {
         add: !this.state.add
       })
     }
-    const holder = list ? 'Add a New List...' : board ? 'Board Name' : '';
+    const holder = list ? 'Add a New List...' : board ? 'Add your task' : '';
     const message = list ? 'Add a New List...' : board ? 'Add new board...' : 'Add a New Card...';
     return (
-      <div className={list ? 'tarjeta' : ''}>
+      <div className={list ? 'card' : ''}>
         {
           this.state.add ?
-            <div className={list || board ? 'tarea' : ''}>
+            <div className={list || board ? 'task' : ''}>
               <form onSubmit={(e) => {
                 e.preventDefault();
                 card ? funcion(this.input.value, boardId, parametro) : funcion(this.input.value, parametro);
@@ -46,7 +46,7 @@ class Add extends Component {
 
             </div>
             :
-            <div className={list || board ? 'tarea addNew' : 'addNew'} onClick={change}>
+            <div className={list || board ? 'task addNew' : 'addNew'} onClick={change}>
               {message}
             </div>
         }

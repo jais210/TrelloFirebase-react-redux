@@ -9,7 +9,7 @@ const Header = ({ user }) => {
         <header id='title'>
             <span>
                 <NavLink to='/boards'>
-                    <i className="fa fa-columns" aria-hidden="true"></i>
+                    
                     <span> Boards</span>
                 </NavLink>
             </span>
@@ -19,7 +19,7 @@ const Header = ({ user }) => {
                     <span> {user.name} {user.lastName}</span>
                 </a>
                 <NavLink to='/signin' onClick={() => signOut()}>
-                    <i className="fa fa-sign-out" aria-hidden="true"></i>
+                   
                     <span> Sign Out</span>
                 </NavLink>
             </span>
