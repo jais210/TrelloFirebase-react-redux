@@ -12,6 +12,5 @@ const Index = () => (
 	</Provider>
 );
 
-// probando();
 ReactDOM.render(<Index />, document.getElementById('root'));
 registerServiceWorker();

@@ -33,7 +33,7 @@ body {
     margin-left: 10px;
   }
   #titulo a span{
-    color: #F9E79F;
+    color: #F9E7;
     margin: 20px;
   }
   
@@ -42,7 +42,7 @@ body {
   }
   
   .tarea{
-    width: 100%;
+    width: 25%;
     background: #F9E7;
     border-radius: 3px;
     margin: 0 0.5em 1em 0.5em;
@@ -71,6 +71,7 @@ body {
     color: #797a7c;
     border-radius: 0 0 3px 3px;
     cursor: pointer;
+    
   }
   .addNew:hover{
     color: #696a6d;
@@ -82,7 +83,7 @@ body {
   }
   
   .cancel:hover{
-    color: rgb(76, 146, 173);
+    color:wheat;
   }
   .error{
     color: #E21515;
@@ -100,10 +101,10 @@ body {
   }
   .tarea.addNew {
     transition: all 0.15s ease-out 0s;
-    background: #F9E79F;
+    background: #F9E7;
     cursor: pointer;
     color: #bdc3c7;
-    margin:0;
+    margin:0px;
   }
   #boards .tarea.addNew{
     margin: 0 0.5em 1em 0.5em;

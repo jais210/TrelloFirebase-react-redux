@@ -58,18 +58,6 @@ export const addCard = (value, board, list) => {
     firebase.database().ref(user.id + '/boards/' + board.id + '/list').set(newList).then(() => console.log('sip'));
 
 }
-export function signUp(firstName, lastName, email, pass) {
-    firebase.auth().createUserWithEmailAndPassword(email, pass).then(user => {
-        let newuser = {
-            firstName, lastName, email
-        }
-        firebase.database().ref('users/' + user.uid).set(newuser);
-
-    }).catch(e => {
-        console.log(e)
-    })
-
-}
 
 export function signOut() {
     firebase.auth().signOut();
@@ -77,35 +65,3 @@ export function signOut() {
         user: ''
     })
 }
-export function signIn(user, pass) {
-    firebase.auth().signInWithEmailAndPassword(user, pass).catch(e => {
-        console.log(e.message)
-        store.setState({
-            login: true
-        })
-    })
-}
-// estoy cambiando algo
-// export const probando = () => {
-//     firebase.auth().onAuthStateChanged(usuario => {
-//         if (usuario) {
-//             console.log('si');
-//             firebase.database().ref('users/' + usuario.uid).once('value').then(res => {
-//                 const fullUserInfo = res.val();
-//                 store.setState({
-//                     user: {
-//                         id: 'users/' + usuario.uid,
-//                         name: fullUserInfo.firstName,
-//                         lastName: fullUserInfo.lastName
-//                     }
-//                 })
-//                 console.log('full info ', fullUserInfo);
-
-//             })
-//             readBoard('users/' + usuario.uid);
-//         } else {
-//             console.log('no')
-//         }
-//     });
-
-// }  
