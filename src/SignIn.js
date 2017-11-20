@@ -3,8 +3,7 @@ import './SignIn.css';
 import { Form, FormGroup, FormControl, Checkbox, Col, ControlLabel, Button, controlId } from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 
-
-const SignIn = ({user, login}) => {
+const SignIn = () => {
 
   return (
     <header>
@@ -38,9 +37,7 @@ const SignIn = ({user, login}) => {
             <FormGroup>
             {/* <NavLink to="/signup"><a className="a" href="/sign_up" data-reactid=".0.0.0.2">Create new account</a></NavLink> */}
             </FormGroup>
- </Form>
-    
-        
+ </Form>        
  </div>
     </header>
     

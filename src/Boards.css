@@ -19,8 +19,8 @@ body {
   position: fixed;
 }
 #titulo img{
-  margin-top: 5px;
-  height: 32px;
+  margin-top: 0px;
+  height: 42px;
   width: 110px;
 }
 #titulo a{
@@ -42,7 +42,7 @@ body {
 
 .tarea{
   width: 100%;
-  background: rgba(222, 225, 227, 0.9);
+  background:#F9E79F;
   border-radius: 3px;
   margin: 0 0.5em 1em 0.5em;
   line-height: 1.75em;
@@ -56,6 +56,7 @@ body {
 #boards a{
   text-decoration: none;
   color: black;
+  
 }
 .tareal{
   background-color: white;
@@ -73,7 +74,7 @@ body {
 }
 .addNew:hover{
   color: #696a6d;
-  background-color: rgba(200, 204, 206, 0.9);
+  background-color: #F9E79F;
 }
 .cancel{
   color: rgb(90, 164, 194);
@@ -128,7 +129,7 @@ body {
 
 /*Seccion lista*/
 .lista {
-  background-color: #E3E3E3;
+  background-color:#F9E79F;
   border-radius: 10px;
   margin: 0 15px;
   padding: 10px;
@@ -147,7 +148,8 @@ body {
 .añadir{
   color: gray;
   cursor: pointer;
-  margin: 15px 0;
+  margin: 5px 0;
+  padding: 10px;
 }
 
 

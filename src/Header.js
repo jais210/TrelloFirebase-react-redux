@@ -2,13 +2,14 @@ import React from 'react';
 import { Image } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { signOut } from './actions';
+import './Header.css';
 
 const Header = ({ user }) => {
     return (
-        <header id='titulo'>
+        <header id='title'>
             <span>
                 <NavLink to='/boards'>
-                    <i class="fa fa-columns" aria-hidden="true"></i>
+                    <i className="fa fa-columns" aria-hidden="true"></i>
                     <span> Boards</span>
                 </NavLink>
             </span>
@@ -18,7 +19,7 @@ const Header = ({ user }) => {
                     <span> {user.name} {user.lastName}</span>
                 </a>
                 <NavLink to='/signin' onClick={() => signOut()}>
-                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    <i className="fa fa-sign-out" aria-hidden="true"></i>
                     <span> Sign Out</span>
                 </NavLink>
             </span>

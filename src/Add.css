@@ -52,7 +52,7 @@ i
 .newCard:hover
 {
   color: #4c4e50;
-  background-color: #BFC4C8;  
+  background-color: #F9E79F;  
 }
 .logo{
   display: inline-block;
@@ -65,12 +65,12 @@ i
 }
 .card
 {
-  background-color: white;
+  background-color: #F9E79F;
   margin: 5px;
 }
 .createBoard
 {
   color: #4c4e50; 
-  background-color: #DDDDDD;
+  background-color: #F9E79F;
   border: 1px solid rgb(189, 195, 199);
 }

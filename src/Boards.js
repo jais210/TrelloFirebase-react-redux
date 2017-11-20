@@ -9,7 +9,7 @@ export const Boards = ({ array }) => {
         <div>
             <Grid id='boards'>
                 <h3 style={{ marginTop: '60px' }}>
-                    <i class="fa fa-user"></i>
+                    <i className="fa fa-user"></i>
                     <span> My boards</span>
                 </h3>
                 <Row>
@@ -19,7 +19,7 @@ export const Boards = ({ array }) => {
                             return (
                                 <Col md={3} sm={3} xs={3} key={index}>
                                     <NavLink to={path}>
-                                        <div className='tarea'>
+                                        <div classNameName='tarea'>
                                             <h4>{item.name}</h4>
                                         </div>
                                     </NavLink>
@@ -39,14 +39,14 @@ export const Boards = ({ array }) => {
 
 const List = ({ list, board }) => {
     return (
-        <div className='tarjeta'>
-            <div className='tarea'>
+        <div classNameName='tarjeta'>
+            <div classNameName='tarea'>
                 {
                     list &&
                     <div>
                         <h4>{list.name}</h4>
                         {
-                            list.cards && list.cards.map(a => <div className='tareal'>{a}</div>)
+                            list.cards && list.cards.map(a => <div classNameName='tareal'>{a}</div>)
                         }
                     </div>
                 }
