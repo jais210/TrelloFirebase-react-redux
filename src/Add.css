@@ -1,0 +1,76 @@
+body
+{
+  background-color: #89609E;
+}
+.header
+{
+  background-color: #745286;
+}
+.headerElement, .headerElement>a
+{
+  background-color: #896C98;
+  color:rgba(255, 255, 255, 0.5);
+}
+.headerElement:hover, a:hover
+{
+  color: white;
+  text-decoration: none;
+}
+i
+{
+  color: white;
+}
+.myBoards
+{
+  color: white;
+}
+.board, .list
+{
+  color: #4c4e50;
+  background-color: #D5D4DB;
+  text-align: left;
+  width: 196.75px;
+  margin: 10px 0;
+}
+
+
+.new
+{
+  background-color: #745286;  
+  color: #bdc3c7;
+  margin: 10px 0;  
+}
+.new:hover
+{
+  background-color: #6E4D7F;
+  color: #bdc3c7;  
+}
+.newCard,
+{
+  color: #797a7c;
+}
+.newCard:hover
+{
+  color: #4c4e50;
+  background-color: #BFC4C8;  
+}
+.logo{
+  display: inline-block;
+  background: url(https://phoenix-trello.herokuapp.com/images/logo-11ecccd65d1c7977997eb6f0bc0002ad.png?vsn=d) 0 0 no-repeat;
+  background-size: contain;
+  height: 62px;
+  width: 198px;
+  vertical-align: middle;
+
+}
+.card
+{
+  background-color: white;
+  margin: 5px;
+}
+.createBoard
+{
+  color: #4c4e50; 
+  background-color: #DDDDDD;
+  border: 1px solid rgb(189, 195, 199);
+}

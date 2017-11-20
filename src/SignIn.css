@@ -1,0 +1,99 @@
+body{
+  background-color: #89609E;
+}
+.logo{
+  display: inline-block;
+  background: url(https://phoenix-trello.herokuapp.com/images/logo-11ecccd65d1c7977997eb6f0bc0002ad.png?vsn=d) 0 0 no-repeat;
+  background-size: contain;
+  height: 62px;
+  width: 198px;
+  vertical-align: middle;
+
+}
+
+.singIn{
+  background: #89609E;
+  position: absolute;
+  width: 450px;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.input{
+  color: inherit;
+  font: inherit;
+  margin: 5px;
+  border: 0px none;
+  width: 350px;
+  padding: 1em;
+  font-size: 1.1em;  
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: auto;
+  border-radius: 3px;
+}
+FormGroup{
+  padding: 10px;
+}
+.button{
+  border: 0px none;
+  width: 350px;
+  padding: 1em;
+  font-size: 1.1em;  
+  border-image: initial;
+  transition: all 0.15s ease-out 0s;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+.btn{
+  border: 0px none;
+  width: 350px;
+  padding: 1em;
+  font-size: 1.1em;  
+  border-image: initial;
+  transition: all 0.15s ease-out 0s;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  -webkit-appearance: button;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn:hover{
+  border: 0px none;
+  width: 350px;
+  padding: 1em;
+  font-size: 1.1em;  
+  border-image: initial;
+  transition: all 0.15s ease-out 0s;
+  background: white;
+  color:  #89609E;
+  border: 1px solid #fff;
+  -webkit-appearance: button;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.a{
+  transition: all 0.15s ease-out 0s;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 1em;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 1.1em;  
+  border-image: initial;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+    
+}
+
+.a:hover {
+  color: white;
+}
