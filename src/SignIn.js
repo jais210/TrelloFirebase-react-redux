@@ -1,20 +1,30 @@
 import React from 'react';
-import './SignIn.css';
 import { Form, FormGroup, FormControl, Checkbox, Col, ControlLabel, Button, controlId } from 'react-bootstrap';
-import {NavLink} from 'react-router-dom';
+import {NavLink,  Redirect } from 'react-router-dom';
+import {connect} from 'redux-zero/react';
+import {signIn, signOut, signUp} from './actions';
+import './SignIn.css';
 
-const SignIn = () => {
+const SignIn = ({successLogin}) => {
 
   return (
     <header>
           <div className="singIn">
-      <Form horizontal >
+            {
+              successLogin && <Redirect to = "/board"/>
+            }
+      <Form horizontal onSubmit = {
+        e => {
+          e.preventDefault();
+          signIn (this.emailInputRef.value, this.passwordInputRef.value)
+        }
+      } >
         <FormGroup controlId="formHorizontalEmail">
           <Col className="logo" componentClass={ControlLabel} sm={2}>
 
           </Col>
           <Col sm={10}>
-            <FormControl className="input" type="email" placeholder="quinsal@trello.com" />
+            <FormControl className="input" type="email" placeholder="quinsal@trello.com" ref = {e => this.emailInputRef = e}/>
           </Col>
         </FormGroup>
 
@@ -22,15 +32,15 @@ const SignIn = () => {
           <Col componentClass={ControlLabel} sm={2}>
           </Col>
           <Col sm={10}>
-            <FormControl className="input" type="password" placeholder="add your password" />
+            <FormControl className="input" type="password" placeholder="add your password" ref = { e => this.passwordInputRef = e}/>
           </Col>
         </FormGroup>
 
         <FormGroup>
           <Col smOffset={2} sm={10}>
-          <NavLink to="/boards/"><Button className="button" type="submit">
+          <Button className="button" type="submit">
               Sign in
-            </Button></NavLink>
+            </Button>
           </Col>
           </FormGroup>
 
@@ -44,5 +54,6 @@ const SignIn = () => {
   )
 }
 
-export default SignIn;
+const mapToProps = ({successLogin})  => ({successLogin}) 
+export default connect(mapToProps)(SignIn) ;
 
