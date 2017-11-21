@@ -6,11 +6,11 @@ import { Form, FormGroup, FormControl, Checkbox, Col, ControlLabel, Button, cont
 import './Signup.css';
 
 // Utilizar Redirect 10:30 am Revisión. 
-const Signup = (successLogin)=> {
+const Signup = (successLoging)=> {
     return(
       <div className = "singUp">
         {
-          // successLogin && <Redirect to = "/board"/>
+          // firstName && <Redirect to = "/board"/>
         }
       <Form horizontal onSubmit =  {
                e => {

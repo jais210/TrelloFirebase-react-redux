@@ -1,8 +1,8 @@
 import store from './store';
 import {auth, database} from './firebase';
 
-export function signIn (user, password) {
-    auth.signInWithEmailAndPassword(user, password).then (userObj => {
+export function signIn (user, pass) {
+    auth.signInWithEmailAndPassword(user, pass).then (userObj => {
  
        database.ref ('users/' + userObj.uid).once ('value').then ( res => {
           const fullUserInformation = res.val(); 
@@ -20,11 +20,11 @@ export function signIn (user, password) {
     })
  }
 
-export function signUp (firstName, lastName, email, password) 
+export function signUp (firstName, lastName, email, pass) 
 {
-   console.log ('signUp' + firstName + lastName + email + password);
+   console.log ('signUp' + firstName + lastName + email + pass);
 
-   auth.createUserWithEmailAndPassword (email, password).then ( user => {
+   auth.createUserWithEmailAndPassword (email, pass).then ( user => {
       let newUser = {
          firstName, lastName, email
       }

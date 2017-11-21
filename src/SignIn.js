@@ -5,14 +5,15 @@ import { connect } from 'redux-zero/react';
 import { signIn, signOut, signUp } from './actions';
 import './Signin.css';
 
-const Signin = ({ successLogin }) => {
+const Signin = ({successLoging }) => {
 
   return (
     
       <div className="singIn">
          {
-          // successLogin && <Redirect to="/board" />
+          successLoging && <Redirect to="/board" />
         } 
+        
         <div>
           <Form horizontal onSubmit={
             e => {
