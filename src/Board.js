@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'redux-zero/react';
 import {NavLink,  Redirect } from 'react-router-dom';
 import {signIn, signOut, signUp, addNewBoard} from './actions'; 
-import UserBoards from './UserBoards';
+import Userboards from './Userboards';
 
 
 const Board = ({successLogin, user, boards, stages, tasks}) => {
@@ -10,7 +10,7 @@ const Board = ({successLogin, user, boards, stages, tasks}) => {
    let list =  null;
    if (boards)
       list = boards.map ( board => {
-         return  <Board key = {board.id} 
+         return  <Userboards key = {board.id} 
                         title = {board.title}
                         boardId = {board.id}
                         stages={stages == null ? null :  
@@ -33,14 +33,14 @@ const Board = ({successLogin, user, boards, stages, tasks}) => {
             </ul>
 
          {
-            !successLogin  && <Redirect to = "/login" />
+            !successLogin  && <Redirect to = "/signin" />
          }
 
          <button onClick = {signOut}>
             SignOut
          </button>   
             <div>
-                 {user.email} - {user.fullname} - {user.survey} -  {user.question} - {user.options} 
+                 {user.email} - {user.fistName} - {user.lastName} 
             </div>
 
       </div>

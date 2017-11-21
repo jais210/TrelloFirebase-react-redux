@@ -3,14 +3,14 @@ import {NavLink,  Redirect } from 'react-router-dom';
 import {connect} from 'redux-zero/react'
 import {signIn, signOut, signUp} from './actions'
 import { Form, FormGroup, FormControl, Checkbox, Col, ControlLabel, Button, controlId } from 'react-bootstrap';
-import './SignUp.css';
+import './Signup.css';
 
 // Utilizar Redirect 10:30 am Revisión. 
-const SignUp = (success)=> {
+const Signup = (successLogin)=> {
     return(
       <div className = "singUp">
         {
-          success && <Redirect to = "/board"/>
+          successLogin && <Redirect to = "/board"/>
         }
       <Form horizontal onSubmit =  {
                e => {
@@ -53,7 +53,7 @@ const SignUp = (success)=> {
       </Button>
     </Col>
     <Col smOffset={2} sm={10}>
-    <a className = "a" href="/sign_up" data-reactid=".0.0.0.2">Create new account</a>
+    <NavLink className = "a" to='signin'>Sign Out</NavLink>
     </Col> 
            
   </FormGroup>
@@ -63,5 +63,5 @@ const SignUp = (success)=> {
   )
    
 }
-const mapToProps = ({success})  => ({success}) 
-export default connect(mapToProps)(signUp) ;
+const mapToProps = ({successLogin})  => ({successLogin}) 
+export default connect(mapToProps)(Signup) ;

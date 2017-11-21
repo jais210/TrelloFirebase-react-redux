@@ -70,11 +70,6 @@ export function signIn (user, password) {
    })
 }
 
-
-export function readBoard () {
-    
-}
-
 export function  addStage (text, board_id) {
    let newobj = {
       title: text, 

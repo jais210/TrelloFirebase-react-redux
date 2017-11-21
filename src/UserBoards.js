@@ -2,7 +2,7 @@ import React from 'react'
 import {addStage} from './actions'
 import Stages from './Stages';
 
-class UserBoards extends React.Component {
+class Userboards extends React.Component {
    render () {
       const {title, boardId, stages, tasks} = this.props;
       
@@ -35,4 +35,4 @@ class UserBoards extends React.Component {
    }
 }
 
-export default UserBoards;
+export default Userboards;
