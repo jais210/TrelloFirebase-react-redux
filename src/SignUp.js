@@ -6,17 +6,24 @@ import { Form, FormGroup, FormControl, Checkbox, Col, ControlLabel, Button, cont
 import './SignUp.css';
 
 // Utilizar Redirect 10:30 am Revisión. 
-const SignUp = ()=> {
+const SignUp = (success)=> {
     return(
       <div className = "singUp">
-      <Form horizontal >
+        {
+          success && <Redirect to = "/board"/>
+        }
+      <Form horizontal onSubmit =  {
+               e => {
+                  e.preventDefault();
+                  signUp (this.fullNameRef.value, this.emailRef.value, this.passwordRef.value, this.surveyRef.value, this.questionRef.value, this.optionsRef.value) 
+               } }>
               
         <FormGroup controlId="formHorizontalEmail">
          <Col className = "logo" componentClass={ControlLabel} sm={2}>
           </Col>
   
           <Col sm={10}>
-          <FormControl  id="formControlsText" label="Text" className = "input" type="text" placeholder="First name" />
+          <FormControl  id="formControlsText" label="Text" className = "input" type="text" placeholder="First name" ref = {e => this.fullNameRef = e}/>
           </Col>
   
         <Col sm={10}>
@@ -24,7 +31,7 @@ const SignUp = ()=> {
        </Col>
   
     <Col sm={10}>
-      <FormControl className = "input" type="email" placeholder="Email" />
+      <FormControl className = "input" type="email" placeholder="Email" ref = {e => this.emailRef = e} />
     </Col>
   </FormGroup>
   
@@ -32,7 +39,7 @@ const SignUp = ()=> {
     <Col componentClass={ControlLabel} sm={2}>          
     </Col>
     <Col sm={10}>
-      <FormControl className = "input" type="password" placeholder="Password"/>
+      <FormControl className = "input" type="password" placeholder="Password" ref = {e => this.passwordRef = e}/>
     </Col>
     <Col sm={10}>
       <FormControl className = "input" type="password" placeholder="Confirm password"/>
@@ -41,9 +48,9 @@ const SignUp = ()=> {
   
   <FormGroup>
     <Col smOffset={2} sm={10}>
-    <NavLink to={"/signin"}><Button className= "btn" type="submit">
+    <Button className= "btn" type="submit">
         Sign in
-      </Button></NavLink>
+      </Button>
     </Col>
     <Col smOffset={2} sm={10}>
     <a className = "a" href="/sign_up" data-reactid=".0.0.0.2">Create new account</a>
@@ -56,5 +63,5 @@ const SignUp = ()=> {
   )
    
 }
-    
-export default SignUp;
+const mapToProps = ({success})  => ({success}) 
+export default connect(mapToProps)(signUp) ;

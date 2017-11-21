@@ -5,13 +5,13 @@ import {connect} from 'redux-zero/react';
 import {signIn, signOut, signUp} from './actions';
 import './SignIn.css';
 
-const SignIn = ({successLogin}) => {
+const SignIn = ({success}) => {
 
   return (
     <header>
           <div className="singIn">
             {
-              successLogin && <Redirect to = "/board"/>
+              success && <Redirect to = "/board"/>
             }
       <Form horizontal onSubmit = {
         e => {
@@ -54,6 +54,6 @@ const SignIn = ({successLogin}) => {
   )
 }
 
-const mapToProps = ({successLogin})  => ({successLogin}) 
+const mapToProps = ({success})  => ({success}) 
 export default connect(mapToProps)(SignIn) ;
 
