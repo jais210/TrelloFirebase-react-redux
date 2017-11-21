@@ -1,5 +1,7 @@
 import React,{component} from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink,  Redirect } from 'react-router-dom';
+import {connect} from 'redux-zero/react'
+import {signIn, signOut, signUp} from './actions'
 import { Form, FormGroup, FormControl, Checkbox, Col, ControlLabel, Button, controlId } from 'react-bootstrap';
 import './SignUp.css';
 
