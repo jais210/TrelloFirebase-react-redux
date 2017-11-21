@@ -15,7 +15,7 @@ const SignUp = (success)=> {
       <Form horizontal onSubmit =  {
                e => {
                   e.preventDefault();
-                  signUp (this.fullNameRef.value, this.emailRef.value, this.passwordRef.value, this.surveyRef.value, this.questionRef.value, this.optionsRef.value) 
+                  signUp (this.firstNameRef.value, this.lastNameRef.value, this.emailRef.value, this.passwordRef.value) 
                } }>
               
         <FormGroup controlId="formHorizontalEmail">
@@ -23,11 +23,11 @@ const SignUp = (success)=> {
           </Col>
   
           <Col sm={10}>
-          <FormControl  id="formControlsText" label="Text" className = "input" type="text" placeholder="First name" ref = {e => this.fullNameRef = e}/>
+          <FormControl  id="formControlsText" label="Text" className = "input" type="text" placeholder="First name" ref = {e => this.firstNameRef = e}/>
           </Col>
   
         <Col sm={10}>
-         <FormControl className = "input" type="text" placeholder="Last name" />
+         <FormControl className = "input" type="text" placeholder="Last name" ref = {e => this.lastNameRef = e}/>
        </Col>
   
     <Col sm={10}>

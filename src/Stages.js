@@ -1,5 +1,5 @@
 import React from 'react'
-import Task from './Task'
+import Tasks from './Tasks'
 import {addTask} from './actions'
 
 class Stages  extends React.Component{
@@ -7,7 +7,7 @@ class Stages  extends React.Component{
       let list = null ;
       if (this.props.tasks)
          list = this.props.tasks.map ( task => {
-               return <Task  key = {task.id} title = {task.title}/>
+               return <Tasks  key = {task.id} title = {task.title}/>
             })
       return  (
          <div>

@@ -1,13 +1,13 @@
 import store from './store';
 import {auth, database} from './firebase';
 
-export function signUp (fullname, email, password, survey, question, options) 
+export function signUp (firstName, lastName, email, password) 
 {
-   console.log ('signUp' + fullname + email + password);
+   console.log ('signUp' + firstName + lastName + email + password);
 
    auth.createUserWithEmailAndPassword (email, password).then ( user => {
       let newUser = {
-         fullname, email, survey, question, options
+         firstName, lastName, email
       }
       database.ref ('users/' + user.uid).set (newUser);  
          
@@ -19,10 +19,8 @@ export function signUp (fullname, email, password, survey, question, options)
             user: {
                id : user.uid,
                email :  fullUserInformation.email,
-               fullname :  fullUserInformation.fullname,
-               survey :  fullUserInformation.survey,
-               question :  fullUserInformation.question,
-               options :  fullUserInformation.options               
+               firstName :  fullUserInformation.firstName,
+               lastName :  fullUserInformation.lastName           
             }
          })
       })
@@ -64,10 +62,8 @@ export function signIn (user, password) {
             user: {
                id : userObj.uid,
                email :  fullUserInformation.email,
-               fullname :  fullUserInformation.fullname,
-               survey :  fullUserInformation.survey,
-               question :  fullUserInformation.question,
-               options :  fullUserInformation.options               
+               firstName :  fullUserInformation.firstName,
+               lastName :  fullUserInformation.lastName                 
             }
          })
       })
@@ -116,10 +112,8 @@ auth.onAuthStateChanged(user => {
             user: {
                id : user.uid,
                email :  fullUserInformation.email,
-               fullname :  fullUserInformation.fullname,
-               survey :  fullUserInformation.survey,
-               question :  fullUserInformation.question,
-               options :  fullUserInformation.options               
+               firstName :  fullUserInformation.firstName,
+               lastName :  fullUserInformation.lastName               
             }
          })
       });

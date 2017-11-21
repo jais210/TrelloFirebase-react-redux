@@ -1,6 +1,6 @@
 import React from 'react'
 import {addStage} from './actions'
-import Stage from './Stage';
+import Stages from './Stages';
 
 class UserBoards extends React.Component {
    render () {
@@ -9,7 +9,7 @@ class UserBoards extends React.Component {
       let list = null;
       if (stages)
          list =  stages.map ( stage => {
-         return <Stage  key={stage.id} title={stage.title} stageId = {stage.id}
+         return <Stages  key={stage.id} title={stage.title} stageId = {stage.id}
             tasks = { tasks == null ? null : tasks.filter ( task => task.stageId === stage.id )}
          />
       });
