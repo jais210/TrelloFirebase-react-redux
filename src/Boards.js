@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
-import Add from './Add';
+import AddElement from './AddElement';
 import { NavLink } from 'react-router-dom';
 
 
@@ -27,7 +27,7 @@ export const Boards = ({ array }) => {
                         })
                     }
                     <Col md={3} sm={3} xs={3} >
-                        <Add board />
+                        <AddElement board />
                     </Col>
                 </Row>
             </Grid>
@@ -50,7 +50,7 @@ const List = ({ list, board }) => {
                     </div>
                 }
 
-                <Add card={list.name} boardId={board} />
+                <AddElement card={list.name} boardId={board} />
             </div>
         </div>
     );
@@ -71,7 +71,7 @@ export const BoardDetail = ({ board }) => {
                             );
                         })
                     }
-                    <Add list={board} />
+                    <AddElement list={board} />
                 </div>
             </Grid>
         </div>

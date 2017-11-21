@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Button } from 'react-bootstrap';
 import { addCard, addBoard, addList } from './actions';
 
 
-class Add extends Component {
+class AddElement extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -55,4 +55,4 @@ class Add extends Component {
   }
 }
 
-export default Add;
+export default AddElement;

@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 import { Form, FormGroup, FormControl, Checkbox, Col, ControlLabel, Button, controlId } from 'react-bootstrap';
 import './SignUp.css';
 
-
+// Utilizar Redirect 10:30 am Revisión. 
 const SignUp = ()=> {
     return(
       <div className = "singUp">
