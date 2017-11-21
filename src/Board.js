@@ -2,20 +2,18 @@ import React, { Component } from 'react';
 import {connect} from 'redux-zero/react';
 import {NavLink,  Redirect } from 'react-router-dom';
 import {signIn, signOut, signUp, addNewBoard} from './actions'; 
-import Userboards from './Userboards';
-
 
 const Board = ({successLogin, user, boards, stages, tasks}) => {
 
    let list =  null;
    if (boards)
       list = boards.map ( board => {
-         return  <Userboards key = {board.id} 
+         return  <div key = {board.id} 
                         title = {board.title}
                         boardId = {board.id}
                         stages={stages == null ? null :  
                                     stages.filter (e => e.board_id == board.id )}  
-                        tasks = {tasks}/>
+                        tasks = {tasks}></div>
       }) 
    return (
       <div>

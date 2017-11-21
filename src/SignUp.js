@@ -10,7 +10,7 @@ const Signup = (successLogin)=> {
     return(
       <div className = "singUp">
         {
-          successLogin && <Redirect to = "/board"/>
+          // successLogin && <Redirect to = "/board"/>
         }
       <Form horizontal onSubmit =  {
                e => {
@@ -53,7 +53,7 @@ const Signup = (successLogin)=> {
       </Button>
     </Col>
     <Col smOffset={2} sm={10}>
-    <NavLink className = "a" to='signin'>Sign Out</NavLink>
+    <NavLink className = "a" to='signin'>Sign In</NavLink>
     </Col> 
            
   </FormGroup>

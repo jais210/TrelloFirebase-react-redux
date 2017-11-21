@@ -11,7 +11,7 @@ const Signin = ({ successLogin }) => {
     
       <div className="singIn">
          {
-          successLogin && <Redirect to="/board" />
+          // successLogin && <Redirect to="/board" />
         } 
         <div>
           <Form horizontal onSubmit={
